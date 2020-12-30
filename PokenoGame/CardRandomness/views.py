@@ -9,7 +9,7 @@ def hello(request):
     return HttpResponse('Hello, World!')
 
 
-def testing(request):
+def home(request):
     cards = Cards.objects.all()
     return render(request, "CardRandomness/home.html", {'cards': cards})
 
