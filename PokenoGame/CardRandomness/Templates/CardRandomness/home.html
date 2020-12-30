@@ -1,5 +1,7 @@
-
-{% extends "base.html" %}
+<!-- Sigh... This wasn't working since I was trying to extend just base.html
+It turns out this extension needs to account for the folder as well, which is why
+it's CardRandomness/base.html, as extends goes directly from the Templates folder-->
+{% extends "CardRandomness/base.html" %}
 
 {% block title %}Pokeno Game{% endblock %}
 {% block header %}Welcome to Dusty's Pokeno Game!{% endblock %}
@@ -7,3 +9,12 @@
 
 
 {% endblock %}
+
+<!--
+<html>
+    <body>
+        <h1>Hello! This should work</h1>
+    </body>
+
+</html>
+-->

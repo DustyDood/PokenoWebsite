@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from .models import Cards
 
 
 # Create your views here.
@@ -9,7 +10,7 @@ def hello(request):
 
 
 def testing(request):
-    context = {}
-    return render(request, "Templates/home.html", context)
+    cards = Cards.objects.all()
+    return render(request, "CardRandomness/home.html", {'cards': cards})
 
 
