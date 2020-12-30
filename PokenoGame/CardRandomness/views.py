@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
 
 
 # Create your views here.
-def home(request):
+def hello(request):
     # So, calling this HttpResponse is enough to actually return something.
     # This means that our pathway is clear, but our response is lacking.
     return HttpResponse('Hello, World!')
