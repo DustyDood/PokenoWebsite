@@ -6,30 +6,27 @@ it's CardRandomness/base.html, as extends goes directly from the Templates folde
 {% load static %}
 
 {% block title %}Pokeno Game{% endblock %}
-{% block header %}<div class="text-center text-primary">Hello, and Welcome to Dusty's Pokeno Game!</div>{% endblock %}
+{% block header %}<p class="text-center text-primary">Hello, and Welcome to Dusty's Pokeno Game!</p>{% endblock %}
 {% block content %}
     <div class="text-center">
+        <!--The div's classes below looks intimidating, but it's just a bunch of bootstrap!
+        These are all pre-rendered designs for bootstrap, as CSS is not my forte-->
         <div class="card text-center text-info border-warning bg-dark mx-auto" style="width: 38rem;">
-          <img src="{% static 'Images/PlayingCardsScramble.jpg' %}" class="card-img-top" alt="This is what Pokeno looks like!">
-          <div class="card-body">
-            <h5 class="card-title">Never heard of Pokeno? That's ok!</h5>
-            <p class="card-text">Pokeno is basically poker meets bingo! You start by choosing 25 playing cards from a deck of cards, placing them in a 5x5 grid. After everyone has chosen
-                their cards, the game begins with an automated dealer revealing cards slowly one by one. </p>
-            <p> Click on your board to mark a card as being revealed!
-                Once you have five cards in a row (horizontally, vertically, or diagonally), that is your "hand". After everyone has a "hand", whosoever has
-                the highest poker "hand" wins!</p>
-            <a href="#" class="btn btn-primary">Start Game</a>
-          </div>
+            <!-- This links to our static folder which contains our image!-->
+            <img src="{% static 'Images/PlayingCardsScramble.jpg' %}" class="card-img-top" alt="This is what Pokeno looks like!">
+            <div class="card-body">
+                <h5 class="card-title">Never heard of Pokeno? That's ok!</h5>
+                <!-- A simple introduction to Pokeno itself -->
+                <p class="card-text">Pokeno is basically poker meets bingo! You start by choosing 25 playing cards from a deck of cards, placing them in a 5x5 grid. After everyone has chosen
+                    their cards, the game begins with an automated dealer revealing cards slowly one by one. </p>
+                <p> Click on your board to mark a card as being revealed!
+                    Once you have five cards in a row (horizontally, vertically, or diagonally), that is your "hand". After everyone has a "hand", whosoever has
+                    the highest poker "hand" wins!</p>
+                <!-- The button below links to a JS file that creates a random game room! -->
+                <button type="button" class="btn btn-primary" onclick="GenerateGame()">Start Game</button>
+            </div>
         </div>
     </div>
 
 {% endblock %}
 
-<!--
-<html>
-    <body>
-        <h1>Hello! This should work</h1>
-    </body>
-
-</html>
--->

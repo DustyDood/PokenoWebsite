@@ -14,3 +14,5 @@ def home(request):
     return render(request, "CardRandomness/home.html", {'cards': cards})
 
 
+def randomGameStart(request, pk):
+    return render(request, "CardRandomness/randomGame.html")
