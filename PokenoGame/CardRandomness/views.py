@@ -15,4 +15,4 @@ def home(request):
 
 
 def randomGameStart(request, pk):
-    return render(request, "CardRandomness/randomGame.html")
+    return render(request, "CardRandomness/randomGame.html", {'pk': pk})

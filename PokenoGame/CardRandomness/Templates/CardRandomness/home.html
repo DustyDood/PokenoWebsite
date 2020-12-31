@@ -6,6 +6,10 @@ it's CardRandomness/base.html, as extends goes directly from the Templates folde
 {% load static %}
 
 {% block title %}Pokeno Game{% endblock %}
+{% block morestyling %}
+        <script src="{% static 'JS/GenerateGame.js' %}" defer></script>
+{% endblock %}
+
 {% block header %}<p class="text-center text-primary">Hello, and Welcome to Dusty's Pokeno Game!</p>{% endblock %}
 {% block content %}
     <div class="text-center">

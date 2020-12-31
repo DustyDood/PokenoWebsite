@@ -1,6 +1,24 @@
-<html>
-    <body>
-        <h1>Hello! This should work</h1>
-    </body>
+{% extends "CardRandomness/base.html" %}
 
-</html>
+{% load static %}
+
+{% block title %}Pokeno Room Number: {{pk}}{% endblock %}
+
+{% block morestyling %}
+    <link href="{% static 'CSS/gameRoomStyling.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'JS/GenerateRandomCard.js' %}" defer></script>
+    <script src="{% static 'JS/GenerateGameBoard.js' %}" defer></script>
+{% endblock %}
+
+{% block header %} <p class="text-center text-primary">Welcome to Pokeno Room Number {{pk}}!</p> {% endblock %}
+
+{% block content %}
+
+<div class="container text-center">
+    <div class="row row-cols-5" id="columnGenerationTime">
+    </div>
+    <button type="button" class="btn btn-primary" onclick="generateAllRandomCards()">Randomize my Board</button>
+</div>
+
+
+{% endblock %}
